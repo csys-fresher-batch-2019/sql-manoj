@@ -17,7 +17,7 @@
                             constraint bus_type_check check (bus_type in('seater','sleeper','semi-sleeper')),
                             constraint ac_check check (ac in('1','0')),
                             constraint from_to_check check (from_location <> to_location),
-                            constraint max_seats_check check(max_seats>0),
+                            constraint max_seats_check check(max_seats>0)
                             );
                             
                             insert into bus_info(100,'KPN',50,'sleeper',1,'chennai','tirupur');
