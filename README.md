@@ -6,15 +6,15 @@
    
 ## Feature 1: List of all Buses
 ```sql
-      create table Bus_Info(Bus_ID number,Bus_Name varchar2(20) not null,
-                            Max_Seats number not null,
-                            Bus_Type varchar2(20) not null,
-                            AC varchar2(20) not null,
-                            From_location varchar2(30) not null,
-                            To_location varchar2(30) not null,
-                            constraint Bus_Name_PK primary key (Bus_name),
-                            constraint Bus_Type_check check (Bus_Type in('Seater','Sleeper','Semi-Sleeper'),
-                            constraint AC_check check(AC in('yes','no')
+      create table bus_info(bus_id number,bus_name varchar2(20) not null,
+                            max_seats number not null,
+                            bus_type varchar2(20) not null,
+                            ac varchar2(20) not null,
+                            from_location varchar2(30) not null,
+                            to_location varchar2(30) not null,
+                            constraint bus_name_pk primary key (bus_name),
+                            constraint bus_type_check check (bus_type in('seater','sleeper','semi-sleeper'),
+                            constraint ac_check check(ac in('yes','no')
                             );
                             
                             
