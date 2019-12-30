@@ -13,6 +13,7 @@
                             constraint Bus_Name_PK primary key (Bus_name),
                             constraint Bus_Type_check check (Bus_Type in('Seater','Sleeper','Semi-Sleeper'),
                             constraint  check( in('yes','no')
-                            );```
+                            );
+                            ```
                             
                             
