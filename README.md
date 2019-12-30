@@ -6,7 +6,8 @@
    
 ## Feature 1: List of all Buses
 ```sql
-      create table bus_info(bus_id number,bus_name varchar2(20) not null,
+      create table bus_info(bus_id number,
+                            bus_name varchar2(20) not null,
                             max_seats number not null,
                             bus_type varchar2(20) not null,
                             ac varchar2(20) not null,
