@@ -19,5 +19,10 @@
                             constraint from_to_unique unique (from_location <> to_location)
                             );
                             
+                            insert into bus_info(KPN,50,'sleeper',1,chennai,tirupur);
+                            insert into bus_info(YBM,40,'seater',1,chennai,salem);
+                            insert into bus_info(YBM,40,'sleeper,1,tirupur,banglore);
+                            insert into bus_info(APPLE,45,'semi-sleeper,0,coimbatore,chennai);
+                            insert into bus_info(ABC,50,'seater',0,chennai,salem);
                             
                             
