@@ -20,10 +20,10 @@
                             constraint max_seats_check check(max_seats>0)
                             );
                             
-                            insert into bus_info(100,'KPN',50,'sleeper',1,'chennai','tirupur');
-                            insert into bus_info(101,'YBM',40,'seater',1,'chennai','salem');
-                            insert into bus_info(102,'YBM',40,'sleeper,1,'tirupur','banglore');
-                            insert into bus_info(103,'APPLE',45,'semi-sleeper,0,'coimbatore','chennai');
-                            insert into bus_info(104,'ABC'',50,'seater',0,'chennai','salem');
+                            insert into bus_info values(100,'KPN',50,'sleeper',1,'chennai','tirupur');
+                            insert into bus_info values(101,'YBM',40,'seater',1,'chennai','salem');
+                            insert into bus_info values(102,'YBM',40,'sleeper,1,'tirupur','banglore');
+                            insert into bus_info values(103,'APPLE',45,'semi-sleeper,0,'coimbatore','chennai');
+                            insert into bus_info values(104,'ABC'',50,'seater',0,'chennai','salem');
                             
                             
