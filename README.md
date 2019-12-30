@@ -10,6 +10,8 @@
                             Max_Seats number not null,
                             Bus_Type varchar2(20) not null,
                             AC varchar2(20) not null,
+                            From varchar2(30) not null,
+                            To varchar2(30) not null,
                             constraint Bus_Name_PK primary key (Bus_name),
                             constraint Bus_Type_check check (Bus_Type in('Seater','Sleeper','Semi-Sleeper'),
                             constraint AC_check check(AC in('yes','no')
