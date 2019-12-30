@@ -14,7 +14,8 @@
                             to_location varchar2(30) not null,
                             constraint bus_name_pk primary key (bus_name),
                             constraint bus_type_check check (bus_type in('seater','sleeper','semi-sleeper'),
-                            constraint ac_check check(ac in('yes','no')
+                            constraint ac_check check(ac in('yes','no'),
+                            constraint from_to_unique unique(from_location,to_location)
                             );
                             
                             
