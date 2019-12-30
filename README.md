@@ -14,6 +14,6 @@
                             constraint Bus_Type_check check (Bus_Type in('Seater','Sleeper','Semi-Sleeper'),
                             constraint  check( in('yes','no')
                             );
-                            ```
+                            
                             
                             
