@@ -37,7 +37,6 @@
 |  3   |  102   |   YBM    |    40     |  seater        | 1  |  tirupur      |  banglore   |
 |  4   |  103   |  APPLE   |    45     |  semi-sleeper  | 0  |  coimbatore   |  chennai    |
 |  5   |  104   |   ABC    |    50     |  seater        | 0  |  chennai      |  salem      |
-You can now import Markdown table code directly using File/Paste table data... dialog.
                             
                            
 ```
