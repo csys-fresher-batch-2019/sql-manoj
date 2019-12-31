@@ -30,8 +30,7 @@
                             
                             select * from bus_info;
                            
-                           ```
-                            
+                      
  ## Feature 2:   
  ```sql
                             
