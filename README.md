@@ -29,14 +29,17 @@
                             insert into bus_info values(s_no_seq.nextval,104,'ABC'',50,'seater',0,'chennai','salem');
                             
                             select * from bus_info;
+# bus_info                            
+| s_no | bus_id | bus_name | max_seats | bus_type       | AC | from_location | to_location |
+|------|--------|----------|-----------|----------------|----|---------------|-------------|
+|  1   |  100   |   KPN    |    50     |  seater        | 1  |  chennai      |  tirupur    |
+|  2   |  101   |   YBM    |    40     |  sleeper       | 1  |  chennai      |  salem      |
+|  3   |  102   |   YBM    |    40     |  seater        | 1  |  tirupur      |  banglore   |
+|  4   |  103   |  APPLE   |    45     |  semi-sleeper  | 0  |  coimbatore   |  chennai    |
+|  5   |  104   |   ABC    |    50     |  seater        | 0  |  chennai      |  salem      |
+You can now import Markdown table code directly using File/Paste table data... dialog.
                             
-| s_no | bus_id | bus_name | max_seats | bus_type       | from_location | to_location |
-|------|--------|----------|-----------|----------------|---------------|-------------|
-|  1   |  100   |   KPN    |    50     |  seater        |  chennai      |  tirupur    |
-|  2   |  101   |   YBM    |    40     |  sleeper       |  chennai      |  salem      |
-|  3   |  102   |   YBM    |    40     |  seater        |  tirupur      |  banglore   |
-|  4   |  103   |  APPLE   |    45     |  semi-sleeper  |  coimbatore   |  chennai    |
-|  5   |  104   |   ABC    |    50     |  seater        |  chennai      |  salem      |
+                           
 ```
 
                             
