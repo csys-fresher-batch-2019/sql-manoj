@@ -22,11 +22,11 @@
                             );
                             create sequence s_no_seq start with 1 increment by 1;
                             
-                            insert into bus_info values(100,'KPN',50,'sleeper',1,'chennai','tirupur');
-                            insert into bus_info values(101,'YBM',40,'seater',1,'chennai','salem');
-                            insert into bus_info values(102,'YBM',40,'sleeper,1,'tirupur','banglore');
-                            insert into bus_info values(103,'APPLE',45,'semi-sleeper,0,'coimbatore','chennai');
-                            insert into bus_info values(104,'ABC'',50,'seater',0,'chennai','salem');
+                            insert into bus_info values(s_no_seq.nextval,100,'KPN',50,'sleeper',1,'chennai','tirupur');
+                            insert into bus_info values(s_no_seq.nextval,101,'YBM',40,'seater',1,'chennai','salem');
+                            insert into bus_info values(s_no_seq.nextval,102,'YBM',40,'sleeper,1,'tirupur','banglore');
+                            insert into bus_info values(s_no_seq.nextval,103,'APPLE',45,'semi-sleeper,0,'coimbatore','chennai');
+                            insert into bus_info values(s_no_seq.nextval,104,'ABC'',50,'seater',0,'chennai','salem');
                             
  ## Feature 2:                         
                             
