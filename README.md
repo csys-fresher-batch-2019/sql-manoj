@@ -29,6 +29,7 @@
                             insert into bus_info values(s_no_seq.nextval,104,'ABC'',50,'seater',0,'chennai','salem');
                             
                             select * from bus_info;
+  ```                          
 # bus_info                            
 | s_no | bus_id | bus_name | max_seats | bus_type       | AC | from_location | to_location |
 |------|--------|----------|-----------|----------------|----|---------------|-------------|
