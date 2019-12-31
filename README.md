@@ -1,10 +1,10 @@
 # eBUS
-   ###  * https://ebus.in
+     * https://ebus.in
 
 ## Features
-   ###  * users can able to view all buses.
+     * users can able to view all buses.
    
-## Feature 1: List of all Buses
+### Feature 1: List of all Buses
 ```sql
       create table bus_info(s_no number not null,
                             bus_id number,
@@ -32,7 +32,7 @@
                            
                            ```
                             
- ## Feature 2:  
+ ### Feature 2:  
  ```sql
                             
                             
