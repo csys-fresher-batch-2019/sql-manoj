@@ -33,7 +33,7 @@
                       
  ## Feature 2:Passenger Information   
  ```sql
- create table passenger_info(p_id num,
+ create table passenger_info(p_id numer,
                             p_name varchar2(30) not null,
                             mob_num number not null,
                             age number not null,
@@ -41,7 +41,7 @@
                             pan_num number unique,
                             constraint p_id_pk primary key(p_id),
                             constraint mob_num_unique unique(mob_num),
-                            constraint aadhar_pan_not_null not null(adhar_num,pan_num)
+                            constraint pan_or_aadhar_not_null check (coalesce(col1, col2, col3) is not null)
                             );
                             
                             
