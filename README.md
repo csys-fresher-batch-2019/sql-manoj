@@ -31,8 +31,17 @@
                             select * from bus_info;
  ```                        
                       
- ## Feature 2:   
+ ## Feature 2:Passenger Information   
  ```sql
- create table
+ create table passenger_info(p_id num,
+                            p_name varchar2(30) not null,
+                            mob_num number not null,
+                            age number not null,
+                            aadhar_num number unique,
+                            pan_num number unique,
+                            constraint p_id_pk primary key(p_id),
+                            constraint mob_num_unique unique(mob_num),
+                            constraint aadhar_pan_not_null not null(adhar_num,pan_num)
+                            );
                             
                             
