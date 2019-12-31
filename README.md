@@ -29,6 +29,7 @@
                             insert into bus_info values(s_no_seq.nextval,104,'ABC'',50,'seater',0,'chennai','salem');
                             
                             select * from bus_info;
+                            
 | s_no | bus_id | bus_name | max_seats | bus_type       | from_location | to_location |
 |------|--------|----------|-----------|----------------|---------------|-------------|
 |  1   |  100   |   KPN    |    50     |  seater        |  chennai      |  tirupur    |
@@ -36,9 +37,10 @@
 |  3   |  102   |   YBM    |    40     |  seater        |  tirupur      |  banglore   |
 |  4   |  103   |  APPLE   |    45     |  semi-sleeper  |  coimbatore   |  chennai    |
 |  5   |  104   |   ABC    |    50     |  seater        |  chennai      |  salem      |
+```
 
                             
- ```                        
+                       
                       
  ## Feature 2:Passenger Information   
  ```sql
