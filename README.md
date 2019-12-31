@@ -2,7 +2,7 @@
   ### * https://ebus.in
 
 ## Features
-  ### * users can view all buses.
+  
    
 ## Feature 1: List of Buses
 ```sql
