@@ -28,11 +28,11 @@
                             insert into bus_info values(s_no_seq.nextval,103,'APPLE',45,'semi-sleeper,0,'coimbatore','chennai');
                             insert into bus_info values(s_no_seq.nextval,104,'ABC'',50,'seater',0,'chennai','salem');
                             
-                            select* from bus_info;
+                            select * from bus_info;
                            
                            ```
                             
- ### Feature 2:  
+ ###Feature 2:  
  ```sql
                             
                             
