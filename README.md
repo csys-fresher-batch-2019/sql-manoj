@@ -56,7 +56,8 @@
                             constraint p_id_pk primary key(p_id),
                             constraint mob_num_unique unique(mob_num),
                             constraint age_check check (age>0),
-                            constraint pan_or_aadhar_not_null check (coalesce(aadhar_num,pan_num) is not null)
+                            constraint pan_or_aadhar_not_null check (coalesce(aadhar_num,pan_num) is not null),
+                            constraint mob_num_check check(999999999>mob_num<10000000000)
                             );
                             
                             
