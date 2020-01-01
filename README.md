@@ -18,14 +18,14 @@
                             constraint bus_type_check check (bus_type in('seater','sleeper','semi-sleeper')),
                             constraint ac_check check (ac in('1','0')),
                             constraint from_to_check check (from_location <> to_location),
-                            constraint max_seats_check check(max_seats>0),
+                            constraint max_seats_check check(max_seats>0)
                             );
                             create sequence s_no_seq start with 1 increment by 1;
                             
                             insert into bus_info values(s_no_seq.nextval,100,'KPN',50,'sleeper',1,'chennai','tirupur');
                             insert into bus_info values(s_no_seq.nextval,101,'YBM',40,'seater',1,'chennai','salem');
-                            insert into bus_info values(s_no_seq.nextval,102,'YBM',40,'sleeper,1,'tirupur','banglore');
-                            insert into bus_info values(s_no_seq.nextval,103,'APPLE',45,'semi-sleeper,0,'coimbatore','chennai');
+                            insert into bus_info values(s_no_seq.nextval,102,'YBM',40,'sleeper',1,'tirupur','banglore');
+                            insert into bus_info values(s_no_seq.nextval,103,'APPLE',45,'semi-sleeper',0,'coimbatore','chennai');
                             insert into bus_info values(s_no_seq.nextval,104,'ABC'',50,'seater',0,'chennai','salem');
                             
                             select * from bus_info;
@@ -49,15 +49,16 @@
  ```sql
  create table passenger_info(p_id number,
                             p_name varchar2(30) not null,
-                            mob_num number not null,
+                            mob_num number(10) not null,
                             age number not null,
                             aadhar_num number unique,
                             pan_num number unique,
                             constraint p_id_pk primary key(p_id),
                             constraint mob_num_unique unique(mob_num),
-                            constraint age_check check (age>0),
+                            constraint age_check check (age>=0),
                             constraint pan_or_aadhar_not_null check (coalesce(aadhar_num,pan_num) is not null),
-                            constraint mob_num_check check(999999999>mob_num<10000000000)
+                            constraint mob_num_check check(mob_num>999999999)
                             );
+                            
                             
                             
