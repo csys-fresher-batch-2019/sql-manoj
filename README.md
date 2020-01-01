@@ -20,7 +20,7 @@
                             constraint from_to_check check (from_location <> to_location),
                             constraint max_seats_check check(max_seats>0)
                             );
-                            create sequence s_no_seq start with 1 increment by 1;
+                            create sequence s_no_sequence start with 1 increment by 1;
                             
                             insert into bus_info values(s_no_seq.nextval,100,'KPN',50,'sleeper',1,'chennai','tirupur');
                             insert into bus_info values(s_no_seq.nextval,101,'YBM',40,'seater',1,'chennai','salem');
@@ -51,14 +51,17 @@
                             p_name varchar2(30) not null,
                             mob_num number(10) not null,
                             age number not null,
-                            aadhar_num number unique,
-                            pan_num number unique,
+                            aadhar_num number(12) unique,
+                            pan_num varchar unique,
                             constraint p_id_pk primary key(p_id),
                             constraint mob_num_unique unique(mob_num),
                             constraint age_check check (age>=0),
                             constraint pan_or_aadhar_not_null check (coalesce(aadhar_num,pan_num) is not null),
                             constraint mob_num_check check(mob_num>999999999)
+                            constraint 
                             );
+                            
+                            insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,
                             
                             
                             
