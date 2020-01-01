@@ -62,7 +62,7 @@
                             constraint pan_number_check check(pan_num>999999999)
                             );
                             
-                            insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,
+                            insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_number) values                  (100,'manoj',21,123456781234,'QWERT1234Y');
                             
                             
                             
