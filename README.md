@@ -56,13 +56,13 @@
                             constraint p_id_pk primary key(p_id),
                             constraint mob_num_unique unique(mob_num),
                             constraint age_check check (age>=0),
-                            constraint pan_or_aadhar_not_null check (coalesce(aadhar_num,pan_num) is not null),
+                            constraint pan_or_aadhar_not_null check (length(aadhar_num||pan_num) is not null),
                             constraint mob_num_check check(mob_num>999999999)
                             constraint aadhar_num_check check(aadhar_num>99999999999)
                             constraint pan_number_check check(pan_num>999999999)
                             );
                             
-                            insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_number) values                  (100,'manoj',21,123456781234,'QWERT1234Y');
+insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_number) values (100,'manoj',1234567890,21,123412341234,'AQWER1234Q');
                             
                             
                             
