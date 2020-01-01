@@ -70,6 +70,9 @@
  insert into passenger_info(p_id,p_name,mob_num,age,pan_num) values (1004,'RAM',9934567895,21,'ADFGH9999T');
  
  
+                         select * from passenger_info;
+ ```                        
+ 
  
  
  
