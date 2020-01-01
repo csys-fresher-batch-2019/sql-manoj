@@ -61,8 +61,17 @@
                             constraint aadhar_num_check check(aadhar_num>99999999999)
                             constraint pan_number_check check(pan_num>999999999)
                             );
-                            
-insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_number) values (100,'manoj',1234567890,21,123412341234,'AQWER1234Q');
+                          
+ insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num) values (1001,'aravinth',9876543210,22,123443211234);
+ insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_num) values (1001,'manoj',9234567895,21,123416341234,'ABCD1234E');
+ insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_num) values (1003,'manoj',9234567899,21,123416349999,'QWERT1234Y');
+ insert into passenger_info(p_id,p_name,mob_num,age,pan_num) values (1004,'RAM',9934567895,21,'ADFGH9999T');
+ 
+ 
+ 
+ 
+ 
+
                             
                             
                             
