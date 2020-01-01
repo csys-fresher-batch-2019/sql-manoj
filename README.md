@@ -85,4 +85,44 @@
 
                             
                             
-                            
+## Feature 3:Route Information                            
+```sql
+create table route_info(route_id number,
+                        bus_id number not null,
+                        fare number not null,
+                        from_location varchar2(30) not null,
+                        to_location varchar2(30) not null,
+                        boarding_date_time date not null,
+                        travel_hours number(4,2),
+                        constraint foreign_key_bud_id foreign key(bus_id) references bus_info(bus_id),
+                        constraint primary_key_route_id primary key (route_id),
+                        constraint check_fare check(fare>=0)
+                        ); 
+       
+       insert into route_info values(120,100,500,'chennai','tirupur',to_date('23-01-2020 10:00:00','dd-mm-yyyy hh:mi:ssPM'),8.30);
+       insert into route_info values(121,101,600,'chennai','salem',to_date('05-01-2020 11:00:00','dd-mm-yyyy hh:mi:ssPM'),6.30);
+       insert into route_info values(122,102,500,'chennai','tirupur',to_date('23-01-2020 01:00:00','dd-mm-yyyy hh:mi:ssAM'),8.30);
+       insert into route_info values(124,103,800,'coimbatore','chennai',to_date('20-01-2020 10:00:00','dd-mm-yyyy hh:mi:ssPM'),7.30);
+       insert into route_info values(125,104,500,'chennai','salem',to_date('29-01-2020 05:00:00','dd-mm-yyyy hh:mi:ssPM'),6.30);
+           
+                        select * from route_info;
+                        
+                        
+                        
+       
+                        
+                        
+                        
+       
+                        
+                        
+                        
+       
+                        
+                        
+                        
+       
+                        
+                        
+                        
+                        
