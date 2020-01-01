@@ -59,8 +59,10 @@
                             constraint pan_or_aadhar_not_null check (length(aadhar_num||pan_num) is not null),
                             constraint mob_num_check check(mob_num>999999999)
                             constraint aadhar_num_check check(aadhar_num>99999999999)
-                            constraint pan_number_check check(pan_num>999999999)
+                            constraint pan_num_check check(pan_num like '[A-Z][A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][A-Z]')
                             );
+                            
+                            
                           
  insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num) values (1001,'aravinth',9876543210,22,123443211234);
  insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_num) values (1001,'manoj',9234567895,21,123416341234,'ABCD1234E');
