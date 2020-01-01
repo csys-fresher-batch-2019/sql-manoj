@@ -65,13 +65,21 @@
                             
                           
  insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num) values (1001,'aravinth',9876543210,22,123443211234);
- insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_num) values (1001,'manoj',9234567895,21,123416341234,'ABCD1234E');
+ insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_num) values (1002,'manoj',9234567895,21,123416341234,'ABCD1234E');
  insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_num) values (1003,'manoj',9234567899,21,123416349999,'QWERT1234Y');
- insert into passenger_info(p_id,p_name,mob_num,age,pan_num) values (1004,'RAM',9934567895,21,'ADFGH9999T');
+ insert into passenger_info(p_id,p_name,mob_num,age,pan_num) values (1004,'ram',9934567895,21,'ADFGH9999T');
  
  
                          select * from passenger_info;
- ```                        
+```
+# passenger_info
+| p_id | p_name   | mob_num    | age | aadhar_num   | pan_num    |
+|------|----------|------------|-----|--------------|------------|
+| 1001 | aravinth | 9876543210 | 22  | 123443211234 |            |
+| 1002 | manoj    | 9234567895 | 21  | 123416341234 | ABCD1234E  |
+| 1003 | manoj    | 9234567899 | 21  | 123416349999 | QWERT1234Y |
+| 1004 | ram      | 9934567895 | 21  |              | ADFGH9999T |
+ 
  
  
  
