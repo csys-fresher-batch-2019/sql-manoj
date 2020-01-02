@@ -226,6 +226,11 @@ rou_id := r_id;
 END ROUTE_ID;
 
 select ROUTE_ID(100) from dual;
+```
+To find fair of the travel:
+```sql
+select fair from route_info where from_location='chennai' and to_location='tirupur';
+```
  
 
 
