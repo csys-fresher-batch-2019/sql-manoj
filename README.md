@@ -277,7 +277,7 @@ SET fare=600
 WHERE bus_id= 100;
 ```
 To find buses with seats above 40:
-```
+```sql
 SELECT * 
    FROM bus_info 
    WHERE max_seats IN (SELECT max_seats 
