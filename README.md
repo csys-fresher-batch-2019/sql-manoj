@@ -227,11 +227,16 @@ END ROUTE_ID;
 
 select ROUTE_ID(100) from dual;
 ```
-To find fair of the travel:
+To find fair of the bus:
 ```sql
 select b.bus_name,b.from_location,b.to_location,r.fare from bus_info b,route_info r where b.bus_id=r.bus_id;
 
  
+
+```
+To find fair of the travel(left join):
+```sql
+ select p.p_id,p.bus_id,r.fare from reservation_info p left join route_info r on p.bus_id=r.bus_id;
 
 ```
  
