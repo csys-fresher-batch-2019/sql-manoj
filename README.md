@@ -256,7 +256,7 @@ select bus_name from bus_info;
 
 ```
 
-To find passenger who is not submitted pan details:
+To find passenger who has not submitted pan details:
 
 ```sql
 
@@ -264,6 +264,13 @@ select p_name from passenger_info where pan_num is null;
 
 
 ```
+To find passenger who has not submitted aadhar details:
+```sql
+select p_name from passenger_info where pan_num is null;
+
+
+```
+
 
 
 
