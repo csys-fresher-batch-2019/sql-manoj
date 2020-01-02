@@ -140,10 +140,10 @@ create table route_info(route_id number,
                                  );
                                  
                       
-                      insert into reservation_info values(12345,1002,120,1);                     
-                      insert into reservation_info values(12346,1001,121,1);                     
-                      insert into reservation_info values(12347,1004,122,1);                     
-                      insert into reservation_info values(12348,1003,123,1);
+                      insert into reservation_info values(12345,1002,120,100,1);                     
+                      insert into reservation_info values(12346,1001,121,101,1);                     
+                      insert into reservation_info values(12347,1004,122,102,1);                     
+                      insert into reservation_info values(12348,1003,123,103,1);
                       
                       
                       select * from reservation_table;
