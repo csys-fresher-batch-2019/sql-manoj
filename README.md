@@ -191,6 +191,27 @@ create table route_info(route_id number,
 | 102    | 39              |
 | 103    | 44              |
 | 104    | 50              |
+
+
+To find seat availability:
+
+CREATE OR REPLACE FUNCTION SEATS_AVAILABLE (i_bus_id IN number)
+RETURN NUMBER AS 
+remaining_seats number;
+booked_seats number;
+maximum_seats number;
+
+BEGIN
+select max_seats into maximum_seats from bus_info where bus_id=i_bus_id;
+select sum(no_of_tickets) into booked_seats from reservation_info where bus_id=i_bus_id;
+  remaining_seats := maximum_seats - booked_seats;
+  RETURN remaining_seats;
+END SEATS_AVAILABLE;
+
+select SEATS_AVAILABLE(100) from dual;
+
+
+
                       
                          
                         
