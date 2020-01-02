@@ -253,7 +253,18 @@ select distinct b.bus_id,c.AC from bus_info b,bus_info c where b.AC=c.AC AND b.A
 To display available buses:
 ```sql
 select bus_name from bus_info;
+
 ```
+
+To find passenger who is not submitted pan details:
+
+```sql
+
+select p_name from passenger_info where pan_num is null;
+
+
+```
+
 
 
 
