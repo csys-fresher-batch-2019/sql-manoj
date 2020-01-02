@@ -152,7 +152,7 @@ create table route_info(route_id number,
    ```
    
    
- ## Resevation_Info 
+ ## Reservation_Info 
    
 | ticket_num | p_id | route_id | bus_id | no_of_tickets |
 |------------|------|----------|--------|---------------|
