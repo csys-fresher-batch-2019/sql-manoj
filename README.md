@@ -176,6 +176,8 @@ create table route_info(route_id number,
                          insert into seat_availability values(102,39);
                          insert into seat_availability values(103,44); 
                          insert into seat_availability values(104,50);
+                         
+                          select * from seat_availability;
                         
    ```
    ## seat_availability
