@@ -100,8 +100,8 @@ create table route_info(route_id number,
        insert into route_info values(120,100,500,'chennai','tirupur',to_date('23-01-2020 10:00:00','dd-mm-yyyy hh:mi:ssPM');
        insert into route_info values(121,101,600,'chennai','salem',to_date('05-01-2020 11:00:00','dd-mm-yyyy hh:mi:ssPM');
        insert into route_info values(122,102,500,'chennai','tirupur',to_date('23-01-2020 01:00:00','dd-mm-yyyy hh:mi:ssAM');
-       insert into route_info values(124,103,800,'coimbatore','chennai',to_date('20-01-2020 10:00:00','dd-mm-yyyy hh:mi:ssPM');
-       insert into route_info values(125,104,500,'chennai','salem',to_date('29-01-2020 05:00:00','dd-mm-yyyy hh:mi:ssPM');
+       insert into route_info values(123,103,800,'coimbatore','chennai',to_date('20-01-2020 10:00:00','dd-mm-yyyy hh:mi:ssPM');
+       insert into route_info values(124,104,500,'chennai','salem',to_date('29-01-2020 05:00:00','dd-mm-yyyy hh:mi:ssPM');
            
                         select * from route_info;
                         
@@ -131,8 +131,14 @@ create table route_info(route_id number,
    ```
    
    
+   
                       
-                      
+| ticket_num | p_id | route_id |
+|------------|------|----------|
+| 12345      | 1002 | 120      |
+| 12346      | 1001 | 121      |
+| 12347      | 1004 | 122      |
+| 12348      | 1003 | 123      |
    
    
    
