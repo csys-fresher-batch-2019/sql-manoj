@@ -57,7 +57,7 @@
                             constraint mob_num_unique unique(mob_num),
                             constraint age_check check (age>=0),
                             constraint pan_or_aadhar_not_null check (length(aadhar_num||pan_num) is not null),
-                            constraint mob_num_check check(mob_num>999999999)
+                            constraint mob_num_check check(mob_num>999999999),
                             constraint aadhar_num_check check(aadhar_num>99999999999)
                             );
                             
