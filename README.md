@@ -90,8 +90,6 @@
 create table route_info(route_id number,
                         bus_id number not null,
                         fare number not null,
-                        from_location varchar2(30) not null,
-                        to_location varchar2(30) not null,
                         boarding_date_time datetime not null,
                         departure_date_time datetime not null,
                         constraint foreign_key_bud_id foreign key(bus_id) references bus_info(bus_id),
