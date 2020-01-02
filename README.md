@@ -224,6 +224,7 @@ select route_id into r_id from route_info where bus_id=i_bus_id;
 rou_id := r_id;
   RETURN rou_id;
 END ROUTE_ID;
+
 select ROUTE_ID(100) from dual;
  
 
