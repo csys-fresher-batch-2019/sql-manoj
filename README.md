@@ -59,8 +59,8 @@
                             constraint pan_or_aadhar_not_null check (length(aadhar_num||pan_num) is not null),
                             constraint mob_num_check check(mob_num>999999999)
                             constraint aadhar_num_check check(aadhar_num>99999999999)
-                            constraint pan_num_check check(pan_num like '[A-Z][A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][A-Z]')
                             );
+                            
                             
                             
                           
