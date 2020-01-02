@@ -130,16 +130,20 @@ create table route_info(route_id number,
    create table reservation_info(ticket_num number,
                                  p_id number not null,
                                  route_id number not null,
+                                 bus_id number not null,
+                                 no_of_tickets not null,
+                                 constraint check_no_tickets check(no_of_tickets>0),
                                  constraint primary_key_tic_num primary key(ticket_num),
                                  constraint foreign_key_p_id foreign key(p_id) references passenger_info(p_id),
+                                 constraint foreign_key_b_id foreign key(bus_id) references bus_info(bus_id),
                                  constraint foreign_key_route_id foreign_key(route_id) references route_info(route_id)
                                  );
                                  
                       
-                      insert into reservation_info values(12345,1002,120);                     
-                      insert into reservation_info values(12346,1001,121);                     
-                      insert into reservation_info values(12347,1004,122);                     
-                      insert into reservation_info values(12348,1003,123);
+                      insert into reservation_info values(12345,1002,120,1);                     
+                      insert into reservation_info values(12346,1001,121,1);                     
+                      insert into reservation_info values(12347,1004,122,1);                     
+                      insert into reservation_info values(12348,1003,123,1);
                       
                       
                       select * from reservation_table;
