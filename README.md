@@ -194,7 +194,7 @@ create table route_info(route_id number,
 
 
 To find seat availability:
-sql```
+```sql
 
 CREATE OR REPLACE FUNCTION SEATS_AVAILABLE (i_bus_id IN number)
 RETURN NUMBER AS 
