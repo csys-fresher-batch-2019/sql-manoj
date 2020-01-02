@@ -214,6 +214,22 @@ select SEATS_AVAILABLE(100) from dual;
 
 To find route id of the bus:
 ```sql
+CREATE OR REPLACE FUNCTION ROUTE_ID (i_bus_id number)
+RETURN NUMBER AS 
+r_id number;
+rou_id number;
+
+BEGIN
+select route_id into r_id from route_info where bus_id=i_bus_id;
+rou_id := r_id;
+  RETURN rou_id;
+END ROUTE_ID;
+select ROUTE_ID(100) from dual;
+ 
+
+
+
+
 
 
 
