@@ -131,7 +131,7 @@ create table route_info(route_id number,
    ```
    
    
-   
+ ## Resevation_Info  
                       
 | ticket_num | p_id | route_id |
 |------------|------|----------|
