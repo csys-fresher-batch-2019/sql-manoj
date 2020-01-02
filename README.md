@@ -136,7 +136,7 @@ create table route_info(route_id number,
                                  constraint primary_key_tic_num primary key(ticket_num),
                                  constraint foreign_key_p_id foreign key(p_id) references passenger_info(p_id),
                                  constraint foreign_key_b_id foreign key(bus_id) references bus_info(bus_id),
-                                 constraint foreign_key_route_id foreign_key(route_id) references route_info(route_id)
+                                 constraint foreign_key_route_id foreign key(route_id) references route_info(route_id)
                                  );
                                  
                       
