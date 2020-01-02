@@ -90,8 +90,8 @@
 create table route_info(route_id number,
                         bus_id number not null,
                         fare number not null,
-                        starting_date_time timestamp not null,
-                        ending_date_time timestamp not null,
+                        departure_date_time timestamp not null,
+                        arrival_date_time timestamp not null,
                         constraint foreign_key_bud_id foreign key(bus_id) references bus_info(bus_id),
                         constraint primary_key_route_id primary key (route_id),
                         constraint check_fare check(fare>=0)
