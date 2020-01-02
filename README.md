@@ -114,8 +114,8 @@ create table route_info(route_id number,
                         select * from route_info;
                         
                         
- ```
- Feature 3:Route_info
+```
+## Feature 3:Route_info
 | route_id | bus_id | fare | departure_date_time | arrival_date_time |
 |----------|--------|------|---------------------|-------------------|
 | 120      | 100    | 500  |  23-01-20 10:00PM   |  24-01-20 05:00AM |
