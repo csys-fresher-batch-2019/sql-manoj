@@ -90,18 +90,24 @@
 create table route_info(route_id number,
                         bus_id number not null,
                         fare number not null,
-                        starting_date_time date not null,
-                        ending_date_time date not null,
+                        starting_date_time timestamp not null,
+                        ending_date_time timestamp not null,
                         constraint foreign_key_bud_id foreign key(bus_id) references bus_info(bus_id),
                         constraint primary_key_route_id primary key (route_id),
                         constraint check_fare check(fare>=0)
                         ); 
        
-       insert into route_info values(120,100,500,'chennai','tirupur',to_date('23-01-2020 10:00:00','dd-mm-yyyy hh:mi:ssPM');
-       insert into route_info values(121,101,600,'chennai','salem',to_date('05-01-2020 11:00:00','dd-mm-yyyy hh:mi:ssPM');
-       insert into route_info values(122,102,500,'chennai','tirupur',to_date('23-01-2020 01:00:00','dd-mm-yyyy hh:mi:ssAM');
-       insert into route_info values(123,103,800,'coimbatore','chennai',to_date('20-01-2020 10:00:00','dd-mm-yyyy hh:mi:ssPM');
-       insert into route_info values(124,104,500,'chennai','salem',to_date('29-01-2020 05:00:00','dd-mm-yyyy hh:mi:ssPM');
+       insert into route_info values(120,100,500,to_date('23-01-2020 10:00:00PM','dd-mm-yyyy hh:mi:ssPM'),
+       to_date('24-01-2020 05:00:00AM','dd-mm-yyyy hh:mi:ssAM'));
+       insert into route_info values(121,101,600,to_date('05-01-2020 11:00:00AM','dd-mm-yyyy hh:mi:ssPM'),
+       to_date('05-01-2020 05:00:00PM','dd-mm-yyyy hh:mi:ssPM'));
+       insert into route_info values(122,102,500,to_date('23-01-2020 01:00:00PM','dd-mm-yyyy hh:mi:ssAM'),
+       to_date('23-01-2020 08:00:00PM','dd-mm-yyyy hh:mi:ssPM'));
+       insert into route_info values(123,103,800,to_date('20-01-2020 10:00:00PM','dd-mm-yyyy hh:mi:ssPM'),
+       to_date('21-01-2020 05:00:00AM','dd-mm-yyyy hh:mi:ssAM'));
+       insert into route_info values(124,104,500,to_date('29-01-2020 05:00:00AM','dd-mm-yyyy hh:mi:ssPM'),
+       to_date('29-01-2020 11:00:00AM','dd-mm-yyyy hh:mi:ssAM'));
+       
            
                         select * from route_info;
                         
