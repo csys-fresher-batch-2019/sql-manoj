@@ -229,7 +229,10 @@ select ROUTE_ID(100) from dual;
 ```
 To find fair of the travel:
 ```sql
-select fair from route_info where from_location='chennai' and to_location='tirupur';
+select b.bus_name,b.from_location,b.to_location,r.fare from bus_info b,route_info r where b.bus_id=r.bus_id;
+
+ 
+
 ```
  
 
