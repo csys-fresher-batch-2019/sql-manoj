@@ -4,7 +4,7 @@
 ## Features
   
    
-## Feature 1: List of Buses
+## Feature 1: Bus Information
 ```sql
       create table bus_info(s_no number not null,
                             bus_id number,
@@ -113,6 +113,7 @@ create table route_info(route_id number,
                         
                         
    ```
+   Feature 3:Route_info
 | route_id | bus_id | fare | departure_date_time | arrival_date_time |
 |----------|--------|------|---------------------|-------------------|
 | 120      | 100    | 500  |  23-01-20 10:00PM   |  24-01-20 05:00AM |
