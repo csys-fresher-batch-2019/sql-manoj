@@ -244,6 +244,11 @@ To find maximum no of seats and available seats:
 SELECT b.bus_id,b.max_seats,s.available_seats
 FROM bus_info b
 FULL OUTER JOIN seat_availability s ON b.bus_id=s.bus_id;
+
+```
+To find busses with AC:
+```sql
+select distinct b.bus_id,c.AC from bus_info b,bus_info c where b.AC=c.AC AND b.AC=1;
 ```
 
 
