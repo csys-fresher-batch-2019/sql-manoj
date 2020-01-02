@@ -210,6 +210,11 @@ select sum(no_of_tickets) into booked_seats from reservation_info where bus_id=i
 END SEATS_AVAILABLE;
 
 select SEATS_AVAILABLE(100) from dual;
+```
+
+To find route id of the bus:
+```sql
+
 
 
 
