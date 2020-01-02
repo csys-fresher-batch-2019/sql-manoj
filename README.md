@@ -285,6 +285,14 @@ SELECT *
          WHERE max_seats>40) ;
 
 ```
+To find bus information with available seats:
+```sql
+SELECT b.*,s.available_seats
+FROM bus_info b
+FULL OUTER JOIN seat_availability s ON b.bus_id=s.bus_id;
+```         
+
+
 
 
 
