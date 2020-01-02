@@ -112,7 +112,7 @@ create table route_info(route_id number,
        
    create table reservation_info(ticket_num number,
                                  p_id number not null,
-                                 route_id not null,
+                                 route_id number not null,
                                  constraint primary_key_tic_num primary key(ticket_num),
                                  constraint foreign_key_p_id foreign key(p_id) references passenger_info(p_id),
                                  constraint foreign_key_route_id foreign_key(route_id) references route_info(route_id)
