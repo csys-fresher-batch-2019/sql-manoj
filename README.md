@@ -163,7 +163,7 @@ create table route_info(route_id number,
 
 
 
-   ##Feature 5:Seats Availability
+   ## Feature 5:Seats Availability
    ```sql
          create table seat_availability(bus_id number not null,
                                         available_seats number not null,
