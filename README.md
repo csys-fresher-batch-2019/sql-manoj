@@ -276,6 +276,16 @@ UPDATE route_info
 SET fare=600
 WHERE bus_id= 100;
 ```
+To find buses with seats above 40:
+```
+SELECT * 
+   FROM bus_info 
+   WHERE max_seats IN (SELECT max_seats 
+         FROM bus_info
+         WHERE max_seats>40) ;
+
+```
+
 
 
 
