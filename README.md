@@ -146,7 +146,7 @@ create table route_info(route_id number,
                       insert into reservation_info values(12348,1003,123,103,1);
                       
                       
-                      select * from reservation_table;
+                      select * from reservation_info;
                       
    
    ```
