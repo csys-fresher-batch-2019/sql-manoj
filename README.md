@@ -239,6 +239,21 @@ To find fair of the travel(left join):
  select p.p_id,p.bus_id,r.fare from reservation_info p left join route_info r on p.bus_id=r.bus_id;
 
 ```
+To find maximum no of seats and available seats:
+```sql
+SELECT b.bus_id,b.max_seats,s.available_seats
+FROM bus_info b
+FULL OUTER JOIN seat_availability s ON b.bus_id=s.bus_id;
+```
+
+
+
+
+
+
+
+
+
  
 
 
