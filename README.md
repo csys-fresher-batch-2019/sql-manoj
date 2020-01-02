@@ -270,7 +270,7 @@ select p_name from passenger_info where pan_num is null;
 
 
 ```
-To update bud fare:
+To update bus fare:
 ```sql
 UPDATE route_info
 SET fare=600
