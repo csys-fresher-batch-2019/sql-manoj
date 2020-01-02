@@ -160,6 +160,40 @@ create table route_info(route_id number,
 | 12346      | 1001 | 121      | 101    | 1             |
 | 12347      | 1004 | 122      | 102    | 1             |
 | 12348      | 1003 | 123      | 102    | 1             |
+
+
+
+   ##Feature 5:Seats Availability
+   ```sql
+         create table seat_availability(bus_id number not null,
+                                        available_seats number not null,
+                                        constraint foreign_k_bus_id foreign key(bus_id) references bus_info(bus_id),
+                                        constraint check_no_of_seats check(available_seats>=0)
+                                        );
+                                        
+                         insert into seat_availability values(100,49);
+                         insert into seat_availability values(101,39); 
+                         insert into seat_availability values(102,39);
+                         insert into seat_availability values(103,44); 
+                         insert into seat_availability values(104,50);
+                        
+   ```
+   ## seat_availability
+   
+   
+   
+| bus_id | available_seats |
+|--------|-----------------|
+| 100    | 49              |
+| 101    | 39              |
+| 102    | 39              |
+| 103    | 44              |
+| 104    | 50              |
+                      
+                         
+                        
+                         
+                        
                       
    
    
