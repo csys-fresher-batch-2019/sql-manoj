@@ -250,6 +250,10 @@ To find busses with AC:
 ```sql
 select distinct b.bus_id,c.AC from bus_info b,bus_info c where b.AC=c.AC AND b.AC=1;
 ```
+To display available buses:
+```sql
+select bus_name from bus_info;
+```
 
 
 
