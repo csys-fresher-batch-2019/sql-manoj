@@ -72,7 +72,9 @@
  
                          select * from passenger_info;
 ```
-# passenger_info
+
+
+## passenger_info
 | p_id | p_name   | mob_num    | age | aadhar_num   | pan_num    |
 |------|----------|------------|-----|--------------|------------|
 | 1001 | aravinth | 9876543210 | 22  | 123443211234 |     -      |
