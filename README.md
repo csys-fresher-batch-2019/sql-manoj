@@ -4,31 +4,26 @@
 ## Features
   
    
-## Feature 1: Bus Information
+## Feature 1: User Registration
 ```sql
-      create table bus_info(s_no number not null,
-                            bus_id number,
-                            bus_name varchar2(20) not null,
-                            max_seats number not null,
-                            bus_type varchar2(20) not null,
-                            ac varchar2(20) not null,
-                            from_location varchar2(30) not null,
-                            to_location varchar2(30) not null,
-                            constraint bus_id_pk primary key (bus_id),
-                            constraint bus_type_check check (bus_type in('seater','sleeper','semi-sleeper')),
-                            constraint ac_check check (ac in('1','0')),
-                            constraint from_to_check check (from_location <> to_location),
-                            constraint max_seats_check check(max_seats>0)
-                            );
-                            create sequence s_no_sequence start with 1 increment by 1;
-                            
-                            insert into bus_info values(s_no_sequence.nextval,100,'KPN',50,'sleeper',1,'chennai','tirupur');
-                            insert into bus_info values(s_no_sequence.nextval,101,'YBM',40,'seater',1,'chennai','salem');
-                            insert into bus_info values(s_no_sequence.nextval,102,'YBM',40,'sleeper',1,'tirupur','banglore');
-                            insert into bus_info values(s_no_sequence.nextval,103,'APPLE',45,'semi-sleeper',0,'coimbatore','chennai');
-                            insert into bus_info values(s_no_sequence.nextval,104,'ABC',50,'seater',0,'chennai','salem');
-                            
-                            select * from bus_info;
+create table user_account(
+user_name varchar2(30) not null,
+user_id number,
+user_password varchar2(30) not null,
+gender varchar2(6) not null,
+dob date not null,
+contact_number number(10) not null,
+email_id varchar2(40) not null unique,
+constraint gender_check check (gender in('M','F','OTHERS')),
+constraint user_id_primary_key primary key(user_id),
+constraint mobile_number_check check(999999999<contact_number));
+
+create sequence user_id start with 1000 increment by 1;
+
+      insert into user_account values('manoj',user_id.nextval,'manojpass','M',to_date('23-08-1998'),9790291737,'manoj@gmail.com');
+      insert into user_account values('ram',user_id.nextval,'rampass','M',to_date('22-08-1998'),9790291739,'ram@gmail.com');
+      insert into user_account values('ravi',user_id.nextval,'ravipass','M',to_date('20-08-1998'),9790291730,'ravi@gmail.com');
+      
   ```                          
 # bus_info                            
 | s_no | bus_id | bus_name | max_seats | bus_type       | AC | from_location | to_location |
