@@ -25,16 +25,11 @@ create sequence user_id start with 1000 increment by 1;
       insert into user_account values('ravi',user_id.nextval,'ravipass','M',to_date('20-08-1998'),9790291730,'ravi@gmail.com');
       
   ```                          
-# bus_info                            
-| s_no | bus_id | bus_name | max_seats | bus_type       | AC | from_location | to_location |
-|------|--------|----------|-----------|----------------|----|---------------|-------------|
-|  1   |  100   |   KPN    |    50     |  seater        | 1  |  chennai      |  tirupur    |
-|  2   |  101   |   YBM    |    40     |  sleeper       | 1  |  chennai      |  salem      |
-|  3   |  102   |   YBM    |    40     |  seater        | 1  |  tirupur      |  banglore   |
-|  4   |  103   |  APPLE   |    45     |  semi-sleeper  | 0  |  coimbatore   |  chennai    |
-|  5   |  104   |   ABC    |    50     |  seater        | 0  |  chennai      |  salem      |
-                            
-                           
+| user_name | user_id | user_password | gender | dob        | contact_number | email_id        |
+|-----------|---------|---------------|--------|------------|----------------|-----------------|
+| manoj     | 1000    | manojpass     | M      | 23-08-1998 | 9790291737     | manoj@gmail.com |
+| ram       | 1001    | rampass       | M      | 21-08-1998 | 9790291323     | ram@gmail.com   |
+| ravi      | 1002    | ravipass      | M      | 20-08-1998 | 9900990099     | ravi@gmail.com  |
 
 
                             
