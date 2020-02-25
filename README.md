@@ -24,55 +24,61 @@ create sequence user_id start with 1000 increment by 1;
       insert into user_account values('ram',user_id.nextval,'rampass','M',to_date('22-08-1998'),9790291739,'ram@gmail.com');
       insert into user_account values('ravi',user_id.nextval,'ravipass','M',to_date('20-08-1998'),9790291730,'ravi@gmail.com');
       
-  ```                          
+  ```  
+  ## User Registration:
 | user_name | user_id | user_password | gender | dob        | contact_number | email_id        |
 |-----------|---------|---------------|--------|------------|----------------|-----------------|
 | manoj     | 1000    | manojpass     | M      | 23-08-1998 | 9790291737     | manoj@gmail.com |
-| ram       | 1001    | rampass       | M      | 21-08-1998 | 9790291323     | ram@gmail.com   |
-| ravi      | 1002    | ravipass      | M      | 20-08-1998 | 9900990099     | ravi@gmail.com  |
+| ram       | 1001    | rampass       | M      | 22-08-1998 | 9790291739     | ram@gmail.com   |
+| ravi      | 1002    | ravipass      | M      | 20-08-1998 | 9790291730     | ravi@gmail.com  |
 
 
                             
                        
                       
- ## Feature 2:Passenger Information   
+ ## Feature 2:Bus Details  
  ```sql
- create table passenger_info(p_id number,
-                            p_name varchar2(30) not null,
-                            mob_num number(10) not null,
-                            age number not null,
-                            aadhar_num number(12) unique,
-                            pan_num varchar2(10) unique,
-                            constraint p_id_pk primary key(p_id),
-                            constraint mob_num_unique unique(mob_num),
-                            constraint age_check check (age>=0),
-                            constraint pan_or_aadhar_not_null check (length(aadhar_num||pan_num) is not null),
-                            constraint mob_num_check check(mob_num>999999999),
-                            constraint aadhar_num_check check(aadhar_num>99999999999)
-                            );
+create table bus_details(
+bus_id number,
+bus_name varchar2(20) not null,
+from_location varchar2(20) not null,
+to_location varchar2(20) not null,
+journey_date date not null,
+ticket_price number not null,
+travelling_time varchar2(20) not null,
+constraint b_primary primary key(bus_id),
+constraint f_t_chech check(from_location <> to_location));
                             
                             
-                            
+ insert into bus_details values(101,'YBM','tirupur','chennai',to_date('1-2-2020'),1000,'23:00 to 07:00');
+insert into bus_details values(102,'ABC','tirupur','salem',to_date('21-2-2020'),1000,'01:00 to 08:00');
+insert into bus_details values(103,'ABC','chennai','coimbatore',to_date('2-2-2020'),500,'10:00 to 18:00');
+insert into bus_details values(104,'XYZ','theni','coimbatore',to_date('22-2-2020'),500,'10:00 to 18:00');
+insert into bus_details values(105,'XYZ','theni','coimbatore',to_date('23-2-2020'),500,'10:00 to 18:00');
+
                           
- insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num) values (1001,'aravinth',9876543210,22,123443211234);
- insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_num) values (1002,'manoj',9234567895,21,123416341234,'ABCD1234E');
- insert into passenger_info(p_id,p_name,mob_num,age,aadhar_num,pan_num) values (1003,'manoj',9234567899,21,123416349999,'QWERT1234Y');
- insert into passenger_info(p_id,p_name,mob_num,age,pan_num) values (1004,'ram',9934567895,21,'ADFGH9999T');
  
  
-                         select * from passenger_info;
+                         select * bus_details;
 ```
 
 
-## passenger_info
-| p_id | p_name   | mob_num    | age | aadhar_num   | pan_num    |
-|------|----------|------------|-----|--------------|------------|
-| 1001 | aravinth | 9876543210 | 22  | 123443211234 |     -      |
-| 1002 | manoj    | 9234567895 | 21  | 123416341234 | ABCD1234E  |
-| 1003 | manoj    | 9234567899 | 21  | 123416349999 | QWERT1234Y |
-| 1004 | ram      | 9934567895 | 21  |      -       | ADFGH9999T |
- 
- 
+## Bus_details
+| bus_id | bus_name | from_location | to_location | journey_date | ticket_price | travelling_time  |
+|--------|----------|---------------|-------------|--------------|--------------|------------------|
+|  100   |   KPN    |  tirupur      |  chennai    | 1-2-2020     |   1000       |  23:00 to 07:00  |
+|  101   |   ABC    |  tirupur      |  salem      | 21-2-2020    |   1000       |  01:00 to 08:00  |
+|  102   |   ABC    |  chennai      | coimbatore  | 2-2-2020     |    500       |  10:00 to 18:00  |
+|  103   |    XYZ   |  theni        | coimbatore  | 22-2-2020    |    500       |  10:00 to 18:00  |
+|  104   |   XYZ    |  chennai      |  coimbatore | 23-2-2020    |    500       |  10:00 to 18:00  |  
+                            
+                           
+
+                            
+                           
+
+
+
  
 
                             
@@ -89,17 +95,16 @@ create table route_info(route_id number,
                         constraint check_fare check(fare>=0)
                         ); 
        
-       insert into route_info values(120,100,500,to_date('23-01-2020 10:00:00PM','dd-mm-yyyy hh:mi:ssPM'),
-       to_date('24-01-2020 05:00:00AM','dd-mm-yyyy hh:mi:ssAM'));
-       insert into route_info values(121,101,600,to_date('05-01-2020 11:00:00AM','dd-mm-yyyy hh:mi:ssPM'),
-       to_date('05-01-2020 05:00:00PM','dd-mm-yyyy hh:mi:ssPM'));
-       insert into route_info values(122,102,500,to_date('23-01-2020 01:00:00PM','dd-mm-yyyy hh:mi:ssAM'),
-       to_date('23-01-2020 08:00:00PM','dd-mm-yyyy hh:mi:ssPM'));
-       insert into route_info values(123,103,800,to_date('20-01-2020 10:00:00PM','dd-mm-yyyy hh:mi:ssPM'),
-       to_date('21-01-2020 05:00:00AM','dd-mm-yyyy hh:mi:ssAM'));
-       insert into route_info values(124,104,500,to_date('29-01-2020 05:00:00AM','dd-mm-yyyy hh:mi:ssPM'),
-       to_date('29-01-2020 11:00:00AM','dd-mm-yyyy hh:mi:ssAM'));
-       
+insert into bus_details values(101,'YBM','tirupur','chennai',to_date('1-2-2020'),1000,'23:00 to 07:00');
+insert into bus_details values(102,'ABC','tirupur','salem',to_date('21-2-2020'),1000,'01:00 to 08:00');
+insert into bus_details values(103,'ABC','chennai','coimbatore',to_date('2-2-2020'),500,'10:00 to 18:00');
+insert into bus_details values(104,'XYZ','theni','coimbatore',to_date('22-2-2020'),500,'10:00 to 18:00');
+insert into bus_details values(105,'XYZ','theni','coimbatore',to_date('23-2-2020'),500,'10:00 to 18:00');
+insert into bus_details values(106,'ABC','theni','coimbatore',to_date('23-2-2020'),500,'11:00 to 19:00');
+insert into bus_details values(107,'YBM','tirupur','banglore',to_date('23-2-2020'),500,'20:00 to 07:00');
+insert into bus_details values(108,'qwerty','salem','trichy',to_date('03-03-2020'),300,'10:00 to 13:00');
+
+
            
                         select * from route_info;
                         
