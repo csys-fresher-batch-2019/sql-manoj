@@ -96,47 +96,46 @@ insert into seat_availability values(105,60,60);
 | bus_id | maximum_seats | available_seats |
 |--------|---------------|-----------------|
 | 100    | 60            | 60              |
-| 101    | 50            | 50              |
-| 102    | 40            | 40              |
+| 101    | 50            | 49              |
+| 102    | 40            | 39              |
 | 103    | 50            | 50              |
 | 104    | 60            | 60              |
    
- ## Feature 4:Reservation Information
+ ## Feature 4:Passenger Details
    ``` sql
-       
-   create table reservation_info(ticket_num number,
-                                 p_id number not null,
-                                 route_id number not null,
-                                 bus_id number not null,
-                                 no_of_tickets number not null,
-                                 constraint check_no_tickets check(no_of_tickets>0),
-                                 constraint primary_key_tic_num primary key(ticket_num),
-                                 constraint foreign_key_p_id foreign key(p_id) references passenger_info(p_id),
-                                 constraint foreign_key_b_id foreign key(bus_id) references bus_info(bus_id),
-                                 constraint foreign_key_route_id foreign key(route_id) references route_info(route_id)
-                                 );
-                                 
-                      
-                      insert into reservation_info values(12345,1002,120,100,1);                     
-                      insert into reservation_info values(12346,1001,121,101,1);                     
-                      insert into reservation_info values(12347,1004,122,102,1);                     
-                      insert into reservation_info values(12348,1003,123,103,1);
-                      
-                      
-                      select * from reservation_info;
-                      
-   
+ create table passenger_details(
+booking_id number ,
+user_id number not null,
+bus_id number not null,
+passenger_name varchar2(30) not null,
+age number not null,
+gender varchar2(10),
+mobile_number number not null ,
+no_of_tickets number not null,
+booking_status varchar2(15) default 'pending',
+constraint age_chk check(age>=0),
+constraint gender_chk check (gender in('M','F','OTHERS')),
+constraint booking_status_check check(booking_status in('booked','cancelled','pending')),
+constraint primary_booking primary key(booking_id),
+constraint foreign_userid foreign key(user_id) references user_account (user_id),
+constraint mobile_check check(mobile_number>999999999),
+constraint no_tickets check(no_of_tickets>=0));
+
+
+select*from passenger_details;
+
+
+create sequence sequence_booking_id start with 30 increment by 1; 
+  
    ```
    
    
- ## Reservation_Info 
+ ## Passenger Details 
    
-| ticket_num | p_id | route_id | bus_id | no_of_tickets |
-|------------|------|----------|--------|---------------|
-| 12345      | 1002 | 120      | 100    | 1             |
-| 12346      | 1001 | 121      | 101    | 1             |
-| 12347      | 1004 | 122      | 102    | 1             |
-| 12348      | 1003 | 123      | 102    | 1             |
+| booking_id | bus_id | user_id | passenegr_name | age | gender | mobile_number | no_of_tickets | booking_status |
+|------------|--------|---------|----------------|-----|--------|---------------|---------------|----------------|
+| 10         | 101    | 1000    | manoj          | 21  | M      | 9790291737    | 1             | booked         |
+| 11         | 102    | 1001    | ram            | 21  | M      | 8989098789    | 1             | booked         |
 
 
 
